@@ -1,11 +1,6 @@
 package com.org.users;
 
 import java.util.ArrayList;
-
-
-
-
-
 public class EmployeeValidation {
 	
 	static ArrayList<Employee> employeeList;
@@ -29,14 +24,14 @@ public class EmployeeValidation {
         return null;
     }
 	
-	public Employee validate(String username, String password) {
+	public boolean validate(String username, String password) {
 		Employee e;
 		if(checkIfuserExist(username)){
 			e=findEmployee(username);
 			e.getPassword().equals(password);
-			return e;
+			return true;
 		}
-		return null;
+		return false;
 	}
 	
 	public void addEmployee(String username,String password,String fullName ) {
