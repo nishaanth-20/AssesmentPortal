@@ -8,42 +8,44 @@ public class Executor {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to java Assessment..");
-		String ch;
+		Scanner sc=new Scanner(System.in);
+		String ch="y";
+		int a = 0;
 		do {
 			System.out.println("Enter 1.login or 2.Register..");
-			Scanner sc=new Scanner(System.in);
+			int c=Integer.parseInt(sc.nextLine());
 			String userName,password,fullName;
 			EmployeeValidation emp=new EmployeeValidation();
-			switch(sc.nextInt())
+			switch(c)
 			{
 		    case 1:
-			System.out.println("Enter your userName...");
-			userName=sc.next();
-			System.out.println("Enter your password..");
-			password=sc.next();
-	        if(emp.validate(userName,password))
-	        {
-	        	System.out.println("Enter you want to 1.Begin test or 2.logout");
-	        	switch(sc.nextInt())
-	        	{
-	        	case 1:
-	        		BeginTest test=new BeginTest();
-	        		System.out.println("Start...");
-	        		test.showQuestion();
-	        		System.out.println("your percentage is"+test.percentage()+"%");
-	        		
-	        		break;
-	        	case 2:
-	        		break;
-	        	default:
-	        		System.out.println("Please enter correct options");
-	        	}
-	        }
-	        else
-	        {
-	        	System.out.println("User doesn't exits..");
-	        }
-			break;
+				System.out.println("Enter your userName...");
+				userName=sc.nextLine();
+				System.out.println("Enter your password..");
+				password=sc.nextLine();
+		        if(emp.validate(userName,password))
+		        {
+		        	System.out.println("Enter you want to 1.Begin test or 2.logout");
+		        	switch(Integer.parseInt(sc.nextLine()))
+		        	{
+		        	case 1:
+		        		BeginTest test=new BeginTest();
+		        		System.out.println("Start...");
+		        		test.showQuestion();
+		        		System.out.println("your percentage is"+test.percentage()+"%");
+		        		
+		        		break;
+		        	case 2:
+		        		break;
+		        	default:
+		        		System.out.println("Please enter correct options");
+		        	}
+		        }
+		        else
+		        {
+		        	System.out.println("User doesn't exits..");
+		        }
+				break;
 			case 2:
 			System.out.println("Enter your userName...");
 			userName=sc.next();
@@ -60,12 +62,15 @@ public class Executor {
 			emp.addEmployee(userName, password, fullName);
 	
 			break;
-	
+
+			
+			default:
+				break;
 	
 			}
 			System.out.println("do you want to continue(y/n)");
-			ch=sc.nextLine();
-		}while(ch=="y");
+			a = sc.nextInt();
+		}while(a == 1);
 	}
 }
 

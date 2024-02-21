@@ -4,7 +4,6 @@ public class Answer {
 	int id;
 	int answer;
 	public Answer(int id, int answer) {
-		super();
 		this.id = id;
 		this.answer = answer;
 	}

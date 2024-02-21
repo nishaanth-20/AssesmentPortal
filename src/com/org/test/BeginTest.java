@@ -10,7 +10,7 @@ import com.org.mcq.Questions;
 
 public class BeginTest {
 	static ArrayList<Questions> questionList;
-	static ArrayList<Answer> answerList;
+	static ArrayList<Answer> answerList=new ArrayList<Answer>();
 	static {
 		questionList = new ArrayList<Questions>();
 		
@@ -75,7 +75,7 @@ public class BeginTest {
 		}
 		
 		
-		return score;
+		return score/questionList.size()*100;
 		
 	}
 	
