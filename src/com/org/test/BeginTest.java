@@ -36,7 +36,7 @@ public class BeginTest {
     }
 	
 	
-	void showQuestion() {
+	public void showQuestion() {
 		
 		int choice;
 		
@@ -64,7 +64,7 @@ public class BeginTest {
 		
 	}
 	
-	int percentage() {
+	public int percentage() {
 		Answer a;
 		int score = 0;
 		for(Questions q1:questionList ) {
