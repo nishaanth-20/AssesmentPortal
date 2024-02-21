@@ -1,7 +1,12 @@
 package com.org.Apprunner;
+<<<<<<< HEAD
 import java.util.Scanner;
 import com.org.test.BeginTest;
 import com.org.users.EmployeeValidation;
+=======
+import java.util.*;
+import com.org.users.*;
+>>>>>>> 8685c8621c8af9462f3c922e2aeb4c3f71dcfcdf
 public class Executor {
 
 	public static void main(String[] args) {
@@ -49,10 +54,14 @@ public class Executor {
 		password=sc.next();	
 		System.out.println("Enter your Fullname...");
 		fullName=sc.nextLine();
+<<<<<<< HEAD
 		emp.addEmployee(userName, password, fullName);
+=======
+>>>>>>> 8685c8621c8af9462f3c922e2aeb4c3f71dcfcdf
 		break;
 
 
 	}
 	}
+}
 }
