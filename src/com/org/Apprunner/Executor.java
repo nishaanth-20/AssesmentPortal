@@ -1,6 +1,6 @@
 package com.org.Apprunner;
 import java.util.*;
-import java.com.org.users;
+import com.org.users.*;
 public class Executor {
 
 	public static void main(String[] args) {
@@ -25,10 +25,11 @@ public class Executor {
 		System.out.println("Enter your password..");
 		password=sc.next();	
 		System.out.println("Enter your Fullname...");
-		fullName=sc.nextline();
+		fullName=sc.nextLine();
 		break;
 
 
 	}
 
+}
 }

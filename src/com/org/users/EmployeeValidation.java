@@ -22,7 +22,7 @@ public class EmployeeValidation {
 		return false;
 }
 	
-	public Employee findAdmin(String name){
+	public Employee findEmployee(String name){
         for(Employee e:employeeList){
             if(e.getUserName().equals(name)) return e;
         }
@@ -32,7 +32,7 @@ public class EmployeeValidation {
 	public Employee validate(String username, String password) {
 		Employee e;
 		if(checkIfuserExist(username)){
-			e=findAdmin(username);
+			e=findEmployee(username);
 			e.getPassword().equals(password);
 			return e;
 		}
